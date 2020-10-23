@@ -1,0 +1,52 @@
+c:\users\prathore.mcnsolutions\documents\visual studio 2010\Projects\Login_WPF\Login_WPF\bin\Debug\Login_WPF.exe
+c:\users\prathore.mcnsolutions\documents\visual studio 2010\Projects\Login_WPF\Login_WPF\bin\Debug\Login_WPF.pdb
+c:\users\prathore.mcnsolutions\documents\visual studio 2010\Projects\Login_WPF\Login_WPF\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\prathore.mcnsolutions\documents\visual studio 2010\Projects\Login_WPF\Login_WPF\obj\x86\Debug\App.g.cs
+c:\users\prathore.mcnsolutions\documents\visual studio 2010\Projects\Login_WPF\Login_WPF\obj\x86\Debug\Login_WPF_MarkupCompile.cache
+c:\users\prathore.mcnsolutions\documents\visual studio 2010\Projects\Login_WPF\Login_WPF\obj\x86\Debug\Login_WPF.g.resources
+c:\users\prathore.mcnsolutions\documents\visual studio 2010\Projects\Login_WPF\Login_WPF\obj\x86\Debug\Login_WPF.Properties.Resources.resources
+c:\users\prathore.mcnsolutions\documents\visual studio 2010\Projects\Login_WPF\Login_WPF\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\prathore.mcnsolutions\documents\visual studio 2010\Projects\Login_WPF\Login_WPF\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\prathore.mcnsolutions\documents\visual studio 2010\Projects\Login_WPF\Login_WPF\obj\x86\Debug\Login_WPF.exe
+c:\users\prathore.mcnsolutions\documents\visual studio 2010\Projects\Login_WPF\Login_WPF\obj\x86\Debug\Login_WPF.pdb
+c:\users\prathore.mcnsolutions\documents\visual studio 2010\Projects\Login_WPF\Login_WPF\obj\x86\Debug\Registration.baml
+c:\users\prathore.mcnsolutions\documents\visual studio 2010\Projects\Login_WPF\Login_WPF\obj\x86\Debug\Registration.g.cs
+c:\users\prathore.mcnsolutions\documents\visual studio 2010\Projects\Login_WPF\Login_WPF\obj\x86\Debug\MainWindow.baml
+c:\users\prathore.mcnsolutions\documents\visual studio 2010\Projects\Login_WPF\Login_WPF\obj\x86\Debug\MainWindow.g.cs
+C:\Users\prathore.MCNSOLUTIONS\Documents\Visual Studio 2010\Projects\Login_WPF\Login_WPF\bin\Debug\Login_WPF.exe.config
+C:\Users\prathore\documents\visual studio 2010\Projects\Login_WPF\Login_WPF\bin\Debug\Login_WPF.exe.config
+C:\Users\prathore\documents\visual studio 2010\Projects\Login_WPF\Login_WPF\obj\x86\Debug\Login_WPF.exe
+C:\Users\prathore\documents\visual studio 2010\Projects\Login_WPF\Login_WPF\obj\x86\Debug\Login_WPF.pdb
+C:\Users\prathore\documents\visual studio 2010\Projects\Login_WPF\Login_WPF\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\prathore\documents\visual studio 2010\Projects\Login_WPF\Login_WPF\obj\x86\Debug\Registration.baml
+C:\Users\prathore\documents\visual studio 2010\Projects\Login_WPF\Login_WPF\obj\x86\Debug\Registration.g.cs
+C:\Users\prathore\documents\visual studio 2010\Projects\Login_WPF\Login_WPF\obj\x86\Debug\App.g.cs
+C:\Users\prathore\documents\visual studio 2010\Projects\Login_WPF\Login_WPF\obj\x86\Debug\Login_WPF_MarkupCompile.cache
+C:\Users\prathore\documents\visual studio 2010\Projects\Login_WPF\Login_WPF\obj\x86\Debug\Login_WPF.g.resources
+C:\Users\prathore\documents\visual studio 2010\Projects\Login_WPF\Login_WPF\obj\x86\Debug\Login_WPF.Properties.Resources.resources
+C:\Users\prathore\documents\visual studio 2010\Projects\Login_WPF\Login_WPF\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\prathore\documents\visual studio 2010\Projects\Login_WPF\Login_WPF\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\prathore\documents\visual studio 2010\Projects\Login_WPF\Login_WPF\bin\Debug\Login_WPF.exe
+C:\Users\prathore\documents\visual studio 2010\Projects\Login_WPF\Login_WPF\bin\Debug\Login_WPF.pdb
+C:\Users\prathore\documents\visual studio 2010\Projects\Login_WPF\Login_WPF\obj\x86\Debug\Welcome.baml
+C:\Users\prathore\documents\visual studio 2010\Projects\Login_WPF\Login_WPF\obj\x86\Debug\Welcome.g.cs
+C:\Users\prathore\documents\visual studio 2010\Projects\Login_WPF\Login_WPF\obj\x86\Debug\Login.baml
+C:\Users\prathore\documents\visual studio 2010\Projects\Login_WPF\Login_WPF\obj\x86\Debug\Login.g.cs
+C:\Users\artur\source\repos\Newsy\Login_WPF\bin\Debug\Login_WPF.exe.config
+C:\Users\artur\source\repos\Newsy\Login_WPF\bin\Debug\Login_WPF.exe
+C:\Users\artur\source\repos\Newsy\Login_WPF\bin\Debug\Login_WPF.pdb
+C:\Users\artur\source\repos\Newsy\Login_WPF\obj\x86\Debug\Login_WPF.csprojAssemblyReference.cache
+C:\Users\artur\source\repos\Newsy\Login_WPF\obj\x86\Debug\Login.baml
+C:\Users\artur\source\repos\Newsy\Login_WPF\obj\x86\Debug\Registration.baml
+C:\Users\artur\source\repos\Newsy\Login_WPF\obj\x86\Debug\Welcome.baml
+C:\Users\artur\source\repos\Newsy\Login_WPF\obj\x86\Debug\Login.g.cs
+C:\Users\artur\source\repos\Newsy\Login_WPF\obj\x86\Debug\Registration.g.cs
+C:\Users\artur\source\repos\Newsy\Login_WPF\obj\x86\Debug\Welcome.g.cs
+C:\Users\artur\source\repos\Newsy\Login_WPF\obj\x86\Debug\App.g.cs
+C:\Users\artur\source\repos\Newsy\Login_WPF\obj\x86\Debug\Login_WPF_MarkupCompile.cache
+C:\Users\artur\source\repos\Newsy\Login_WPF\obj\x86\Debug\Login_WPF.g.resources
+C:\Users\artur\source\repos\Newsy\Login_WPF\obj\x86\Debug\Login_WPF.Properties.Resources.resources
+C:\Users\artur\source\repos\Newsy\Login_WPF\obj\x86\Debug\Login_WPF.csproj.GenerateResource.cache
+C:\Users\artur\source\repos\Newsy\Login_WPF\obj\x86\Debug\Login_WPF.csproj.CoreCompileInputs.cache
+C:\Users\artur\source\repos\Newsy\Login_WPF\obj\x86\Debug\Login_WPF.exe
+C:\Users\artur\source\repos\Newsy\Login_WPF\obj\x86\Debug\Login_WPF.pdb

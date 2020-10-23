@@ -1,0 +1,189 @@
+﻿<Page x:Class="Login_WPF.NewScrapperHome"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+            xmlns:local="clr-namespace:Login_WPF"
+            mc:Ignorable="d" 
+            d:DesignHeight="900" d:DesignWidth="1200"
+            Title="NewScrapper - Home">
+    
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" Margin="0,0,0,0">
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
+
+            <Grid Margin="0,0,0,0"  Width="1181"  >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="1000"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+
+                </Grid.RowDefinitions>
+                <Grid.Background>
+                    <ImageBrush ImageSource="https://st.depositphotos.com/3459947/4761/v/600/depositphotos_47615339-stock-video-red-virtual-studio-background.jpg"/>
+                </Grid.Background>
+                <Label   FontFamily="Rockwell Extra Bold" Grid.Column="1" Grid.Row="0" HorizontalContentAlignment="Center" FontSize="36"  Foreground="#0066cc" FontWeight="Bold" BorderThickness="1" >Man is attacked by Cougar in Utah</Label>
+
+                <Image Source="https://cdn.cnn.com/cnnnext/dam/assets/201013101357-utah-hiker-cougar.jpg" Grid.Row="1" Grid.Column="1"  Height="200"/>
+
+
+                <!-- Hottest News -->
+                <Border BorderBrush="#FF000000" Background="Black" BorderThickness="0.5" CornerRadius="10"  Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Margin="0,10,0,10">
+                    <Label   FontFamily="Trebuchet MS" 
+        FontWeight="Bold" FontSize="18"  Foreground="#0066cc" >Hottest News</Label>
+                </Border>
+
+                <ListBox ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Row="3" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Height="250" Background="Orange">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <UniformGrid Rows="1" Columns="3"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+
+                    <Button Click="Button_Click" >
+                        <Button.Template>
+                            <ControlTemplate>
+
+                                <Image Source="https://static.wikia.nocookie.net/bleachmedia/images/4/40/BankaiTensaZangetsu.jpg/revision/latest/scale-to-width-down/340?cb=20190526180553"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill"/>
+
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                    <Button Click="Button_Click" >
+                        <Button.Template>
+                            <ControlTemplate>
+
+                                <Image Source="https://cdn.cnn.com/cnnnext/dam/assets/201024235247-snl-10-24-1-adele-large-169.jpg"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill" />
+
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                    <Button Click="Button_Click" >
+                        <Button.Template>
+                            <ControlTemplate>
+
+                                <Image Source="https://timesofindia.indiatimes.com/thumb/msid-77262658,imgsize-727413,width-400,resizemode-4/77262658.jpg" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill"/>
+
+
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                </ListBox>
+
+                <!-- Games Section -->
+
+
+                <Border BorderBrush="#FF000000" Background="Black" BorderThickness="0.5" CornerRadius="10"  Grid.Column="1" Grid.Row="6" HorizontalAlignment="Left" Margin="0,10,0,10">
+                    <Label   FontFamily="Trebuchet MS" 
+        FontWeight="Bold" FontSize="18"  Foreground="#0066cc" >Games</Label>
+                </Border>
+
+                <ListBox ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Row="7"  Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="LightGreen" Height="250" >
+
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <UniformGrid Rows="1" />
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <Button Click="Button_Click" >
+                        <Button.Template>
+                            <ControlTemplate>
+
+                                <Image Source="https://static.wikia.nocookie.net/bleachmedia/images/4/40/BankaiTensaZangetsu.jpg/revision/latest/scale-to-width-down/340?cb=20190526180553"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill"/>
+
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                    <Button Click="Button_Click" >
+                        <Button.Template>
+                            <ControlTemplate>
+
+                                <Image Source="https://cdn.cnn.com/cnnnext/dam/assets/201024235247-snl-10-24-1-adele-large-169.jpg"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill" />
+
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                    <Button Click="Button_Click" >
+                        <Button.Template>
+                            <ControlTemplate>
+
+                                <Image Source="https://timesofindia.indiatimes.com/thumb/msid-77262658,imgsize-727413,width-400,resizemode-4/77262658.jpg" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill"/>
+
+
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </ListBox>
+
+
+
+
+                <!-- Movies -->
+
+                <Border BorderBrush="#FF000000" Background="Black" BorderThickness="0.5" CornerRadius="10"  Grid.Column="1" Grid.Row="8" HorizontalAlignment="Left" Margin="0,10,0,10">
+                    <Label   FontFamily="Trebuchet MS" 
+        FontWeight="Bold" FontSize="18"  Foreground="#0066cc" >Movies</Label>
+                </Border>
+
+                <ListBox ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Row="9"  Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="LightGreen" Height="250" >
+
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <UniformGrid Rows="1" />
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <Button Click="Button_Click" >
+                        <Button.Template>
+                            <ControlTemplate>
+
+                                <Image Source="https://static.wikia.nocookie.net/bleachmedia/images/4/40/BankaiTensaZangetsu.jpg/revision/latest/scale-to-width-down/340?cb=20190526180553"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill"/>
+
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                    <Button Click="Button_Click" >
+                        <Button.Template>
+                            <ControlTemplate>
+
+                                <Image Source="https://cdn.cnn.com/cnnnext/dam/assets/201024235247-snl-10-24-1-adele-large-169.jpg"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill" />
+
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                    <Button Click="Button_Click" >
+                        <Button.Template>
+                            <ControlTemplate>
+
+                                <Image Source="https://timesofindia.indiatimes.com/thumb/msid-77262658,imgsize-727413,width-400,resizemode-4/77262658.jpg" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill"/>
+
+
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </ListBox>
+
+            </Grid>
+
+        </StackPanel>
+    </ScrollViewer>
+</Page>

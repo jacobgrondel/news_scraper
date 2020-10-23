@@ -1,0 +1,210 @@
+﻿<Window x:Class="Newsy.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Registration" Height="480" Width="500" 
+        AllowsTransparency="True" Background="Transparent"
+        WindowStyle="None" ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        MouseDown="Window_MouseDown">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Border CornerRadius="10" Grid.RowSpan="2" Margin="-10,0,10,0">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#7be9f6" Offset="0.0"/>
+                    <GradientStop Color="#f083da" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30,30,0,0">
+            <Image Source="Logo1.jpg" Width="80"/>
+            <TextBlock  x:Name="title"
+                        Text="Registration"
+                        FontSize="22"
+                        FontWeight="Heavy"
+                        FontFamily="Helvetica"
+                        Foreground="White"
+                        HorizontalAlignment="Center"/>
+        </StackPanel>
+
+        <StackPanel Height="100"  VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,-90,80,0">
+            <TextBlock Height="20" 
+                       x:Name="errormessage" 
+                       Width="250"  
+                       OpacityMask="Crimson" 
+                       Foreground="#FFE5572C" />
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="1" Margin="10,-70,10,0">
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock x:Name="textBlockFirstname" 
+                           Text="First Name:" 
+                           FontFamily="Helvetic"
+                           FontWeight="DemiBold"
+                           FontSize="14"
+                           Foreground="White"
+                           VerticalAlignment="Top"
+                           HorizontalAlignment="Left"
+                           Margin="20,10,0,0"/>
+                <TextBox Name="textBoxFirstName"
+                         VerticalAlignment="Top"
+                         HorizontalAlignment="Right"
+                         FontFamily="Helvetic"
+                         FontWeight="Light"
+                         Foreground="White"
+                         Background="Black"
+                         Width="235"
+                         BorderThickness="0"
+                         HorizontalContentAlignment="Left"
+                         Opacity="0.35"
+                         Height="25"
+                         Margin="0,-20,80,0"/>
+                
+                <TextBlock x:Name="textBlockLastName" 
+                           Text="Last Name:"
+                           FontFamily="Helvetic"
+                           FontWeight="DemiBold"
+                           FontSize="14"
+                           Foreground="White"
+                           VerticalAlignment="Top"
+                           HorizontalAlignment="Left"
+                           Margin="20,20,0,0"/>
+                <TextBox Name="textBoxLastName"
+                         VerticalAlignment="Top"
+                         HorizontalAlignment="Right"
+                         FontFamily="Helvetic"
+                         FontWeight="Light"
+                         Foreground="White"
+                         Background="Black"
+                         Width="235"
+                         BorderThickness="0"
+                         HorizontalContentAlignment="Left"
+                         Opacity="0.35"
+                         Height="25"
+                         Margin="0,-20,80,0"/>
+
+                <TextBlock x:Name="textBlockEmailId" 
+                           Text="EmailId:"
+                           FontFamily="Helvetic"
+                           FontWeight="DemiBold"
+                           FontSize="14"
+                           Foreground="White"
+                           VerticalAlignment="Top" 
+                           HorizontalAlignment="Left" 
+                           Margin="20,20,0,0"/>
+
+                <TextBox Name="textBoxEmail"
+                         VerticalAlignment="Top"
+                         HorizontalAlignment="Right"
+                         FontFamily="Helvetic"
+                         FontWeight="Light"
+                         Foreground="White"
+                         Background="Black"
+                         Width="235"
+                         BorderThickness="0"
+                         HorizontalContentAlignment="Left"
+                         Opacity="0.35"
+                         Height="25"
+                         Margin="0,-20,80,0"/>
+
+                <TextBlock x:Name="textBlockPassword" 
+                           Text="Password:"
+                           FontFamily="Helvetic"
+                           FontWeight="DemiBold"
+                           FontSize="14"
+                           Foreground="White"
+                           VerticalAlignment="Top" 
+                           HorizontalAlignment="Left"
+                           Margin="20,20,0,0"/>
+
+                <PasswordBox Name="passwordBox1"
+                         VerticalAlignment="Top"
+                         HorizontalAlignment="Right"
+                         FontFamily="Helvetic"
+                         FontWeight="Light"
+                         Foreground="White"
+                         Background="Black"
+                         Width="235"
+                         BorderThickness="0"
+                         HorizontalContentAlignment="Left"
+                         Opacity="0.35"
+                         Height="25"
+                         Margin="0,-20,80,0"/>
+
+                <TextBlock x:Name="textBlockConfirmPwd"  
+                           Text="Confirm Password:"
+                           FontFamily="Helvetic"
+                           FontWeight="DemiBold"
+                           FontSize="14"
+                           Foreground="White"
+                           VerticalAlignment="Top" 
+                           HorizontalAlignment="Left" 
+                           Margin="20,20,0,0" />
+
+                <PasswordBox Name="passwordBoxConfirm" 
+                         VerticalAlignment="Top"
+                         HorizontalAlignment="Right"
+                         FontFamily="Helvetic"
+                         FontWeight="Light"
+                         Foreground="White"
+                         Background="Black"
+                         Width="235"
+                         BorderThickness="0"
+                         HorizontalContentAlignment="Left"
+                         Opacity="0.35"
+                         Height="25"
+                         Margin="0,-20,80,0"/>
+                <!--<TextBlock Height="23" HorizontalAlignment="Left" Margin="67,166,0,0" Name="textBlockAddress" Text="Address" VerticalAlignment="Top" Width="110" />-->
+
+                <StackPanel Orientation="Horizontal" Margin="35,30,100,10">
+                    <Button Width="100" Height="35" Content="SEND" Margin="60,0,60,0"/>
+                    <Button Width="100" Height="35" Content="CANCEL" Click="Login_Click"/>
+                </StackPanel>
+
+            </StackPanel>
+
+                <!--<Border Width="250"
+                    Height="2"
+                    Background="White"
+                    Opacity="0.5"/>
+
+
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                <PasswordBox x:Name="password"
+                         FontFamily="Helvetic"
+                         FontWeight="Light"
+                         Password="admin"
+                         HorizontalAlignment="Left"
+                         Foreground="White"
+                         Background="Transparent"
+                         Width="235"
+                         BorderThickness="0"
+                         HorizontalContentAlignment="Left"
+                         Opacity="0.5"
+                         Height="25"
+                         Margin="63,0,0,0"/>
+            </StackPanel>
+            <Border Width="250"
+                    Height="2"
+                    Background="White"
+                    Opacity="0.5"/> -->
+
+
+            <!--<StackPanel Orientation="Horizontal" Margin="0,50,0,0">
+                <Button Width="100" Height="35" Content="LOGIN" Margin="60,0,60,0" Click="buttonLogin_Click"/>
+                <Button Width="100" Height="35" Content="REGISTER" Click="buttonRegister_Click"/>
+            </StackPanel> -->
+
+        </StackPanel>
+
+
+
+    </Grid>
+</Window>
