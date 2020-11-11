@@ -106,10 +106,10 @@ namespace Newsy
         {
             if (Usern.Text == "admin" && password.Password == "admin")
             {
-                NewScrapperHome newScrapper = new NewScrapperHome();
-                var window = new Window();
-                window.Content = newScrapper;
-                window.Show();
+                HomePage newScrapper = new HomePage();
+               
+                
+                newScrapper.Show();
                 // welcome.Show();
                 Close();
             } else
