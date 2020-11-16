@@ -39,9 +39,9 @@
 
                     </LinearGradientBrush>
                 </Grid.Background>
-                <Label   FontFamily="Rockwell Extra Bold" Grid.Column="1" Grid.Row="0" HorizontalContentAlignment="Center" FontSize="36"  Foreground="#0066cc" FontWeight="Bold" BorderThickness="1" >Man is attacked by Cougar in Utah</Label>
+                <Label   FontFamily="Rockwell Extra Bold" Grid.Column="1" Grid.Row="0" HorizontalContentAlignment="Center" FontSize="36"  Foreground="#0066cc" FontWeight="Bold" BorderThickness="1" >Black Friday this is year is going to be online</Label>
 
-                <Image Source="https://cdn.cnn.com/cnnnext/dam/assets/201013101357-utah-hiker-cougar.jpg" Grid.Row="1" Grid.Column="1"  Height="200"/>
+                <Image Source="https://www.history.com/.image/c_fill%2Ccs_srgb%2Cfl_progressive%2Ch_400%2Cq_auto:good%2Cw_620/MTU5OTA4OTk2OTU3OTM5MjMy/black-friday-social-459681640.jpg" Grid.Row="1" Grid.Column="1"  Height="200"/>
 
 
                 <!-- Hottest News -->
@@ -61,7 +61,7 @@
                         <Button.Template>
                             <ControlTemplate>
 
-                                <Image Source="https://static.wikia.nocookie.net/bleachmedia/images/4/40/BankaiTensaZangetsu.jpg/revision/latest/scale-to-width-down/340?cb=20190526180553"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill"/>
+                                <Image Source="https://cdn.mos.cms.futurecdn.net/yUnL8v4TynaEDbtjsUwDhg.jpg"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill"/>
 
                             </ControlTemplate>
                         </Button.Template>
@@ -71,7 +71,7 @@
                         <Button.Template>
                             <ControlTemplate>
 
-                                <Image Source="https://cdn.cnn.com/cnnnext/dam/assets/201024235247-snl-10-24-1-adele-large-169.jpg"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill" />
+                                <Image Source="https://i.pinimg.com/originals/2d/2f/19/2d2f1999b70faf6fdbe92e6bceacea7f.jpg"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill" />
 
                             </ControlTemplate>
                         </Button.Template>
@@ -109,7 +109,7 @@
                         <Button.Template>
                             <ControlTemplate>
 
-                                <Image Source="https://static.wikia.nocookie.net/bleachmedia/images/4/40/BankaiTensaZangetsu.jpg/revision/latest/scale-to-width-down/340?cb=20190526180553"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill"/>
+                                <Image Source="https://cdn.mos.cms.futurecdn.net/yUnL8v4TynaEDbtjsUwDhg.jpg"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill"/>
 
                             </ControlTemplate>
                         </Button.Template>
@@ -119,7 +119,7 @@
                         <Button.Template>
                             <ControlTemplate>
 
-                                <Image Source="https://cdn.cnn.com/cnnnext/dam/assets/201024235247-snl-10-24-1-adele-large-169.jpg"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill" />
+                                <Image Source="https://i.pinimg.com/originals/2d/2f/19/2d2f1999b70faf6fdbe92e6bceacea7f.jpg"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill" />
 
                             </ControlTemplate>
                         </Button.Template>
@@ -158,7 +158,7 @@
                         <Button.Template>
                             <ControlTemplate>
 
-                                <Image Source="https://static.wikia.nocookie.net/bleachmedia/images/4/40/BankaiTensaZangetsu.jpg/revision/latest/scale-to-width-down/340?cb=20190526180553"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill"/>
+                                <Image Source="https://cdn.mos.cms.futurecdn.net/yUnL8v4TynaEDbtjsUwDhg.jpg"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill"/>
 
                             </ControlTemplate>
                         </Button.Template>
@@ -168,7 +168,7 @@
                         <Button.Template>
                             <ControlTemplate>
 
-                                <Image Source="https://cdn.cnn.com/cnnnext/dam/assets/201024235247-snl-10-24-1-adele-large-169.jpg"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill" />
+                                <Image Source="https://i.pinimg.com/originals/2d/2f/19/2d2f1999b70faf6fdbe92e6bceacea7f.jpg"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill" />
 
                             </ControlTemplate>
                         </Button.Template>
