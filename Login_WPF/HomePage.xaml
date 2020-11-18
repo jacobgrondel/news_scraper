@@ -5,14 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Login_WPF"
         mc:Ignorable="d"
-        Title="HomePage" Height="450" Width="800">
+        Title="HomePage" Height="1284" Width="1268">
     <ScrollViewer HorizontalScrollBarVisibility="Auto" Margin="0,0,0,0">
         <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
 
             <Grid Margin="0,0,0,0"  Width="1181"  >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="100"/>
-                    <ColumnDefinition Width="1000"/>
+                    <ColumnDefinition Width="237"/>
+                    <ColumnDefinition Width="764"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -39,9 +40,11 @@
 
                     </LinearGradientBrush>
                 </Grid.Background>
-                <Label   FontFamily="Rockwell Extra Bold" Grid.Column="1" Grid.Row="0" HorizontalContentAlignment="Center" FontSize="36"  Foreground="#0066cc" FontWeight="Bold" BorderThickness="1" >Black Friday this is year is going to be online</Label>
 
-                <Image Source="https://www.history.com/.image/c_fill%2Ccs_srgb%2Cfl_progressive%2Ch_400%2Cq_auto:good%2Cw_620/MTU5OTA4OTk2OTU3OTM5MjMy/black-friday-social-459681640.jpg" Grid.Row="1" Grid.Column="1"  Height="200"/>
+                <TextBox x:Name="mainArticle"   FontFamily="Rockwell Extra Bold" Grid.Column="1" Grid.Row="0" HorizontalContentAlignment="Center" FontSize="36"  Foreground="#0066cc" FontWeight="Bold" BorderThickness="1" Grid.ColumnSpan="2" Background="{x:Null}" Text="Main Article Goes here.." />
+
+                <Image x:Name="mainImage" Source="https://www.history.com/.image/c_fill%2Ccs_srgb%2Cfl_progressive%2Ch_400%2Cq_auto:good%2Cw_620/MTU5OTA4OTk2OTU3OTM5MjMy/black-friday-social-459681640.jpg" RenderOptions.EdgeMode="Aliased" RenderOptions.BitmapScalingMode="NearestNeighbor" Grid.Row="1" Grid.Column="1"  Height="200" Grid.ColumnSpan="2"/>
+                <TextBox x:Name="mainTextBox" HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" VerticalAlignment="Top" Width="242" Margin="148,109,0,0" Grid.Row="1" Grid.Column="2" TextChanged="TextBox_TextChanged" Text="Article goes here" FontSize="15" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}"/>
 
 
                 <!-- Hottest News -->
@@ -50,7 +53,7 @@
         FontWeight="Bold" FontSize="18"  Foreground="#0066cc" >Hottest News</Label>
                 </Border>
 
-                <ListBox ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Row="3" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Height="250" Background="Orange">
+                <ListBox ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Row="3" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Height="250" Background="Orange" Grid.ColumnSpan="2">
                     <ListBox.ItemsPanel>
                         <ItemsPanelTemplate>
                             <UniformGrid Rows="1" Columns="3"/>
@@ -60,8 +63,19 @@
                     <Button Click="Button_Click" >
                         <Button.Template>
                             <ControlTemplate>
+                                
+                                <Image x:Name="hotNewsImg1" Source="https://i.pinimg.com/originals/2d/2f/19/2d2f1999b70faf6fdbe92e6bceacea7f.jpg"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill" />
+                                
+                            </ControlTemplate>
+                        </Button.Template>
 
-                                <Image Source="https://cdn.mos.cms.futurecdn.net/yUnL8v4TynaEDbtjsUwDhg.jpg"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill"/>
+                    </Button>
+
+                    <Button Click="Button_Click" >
+                        <Button.Template>
+                            <ControlTemplate>
+
+                                <Image x:Name="hotNewsImg2" Source="https://i.pinimg.com/originals/2d/2f/19/2d2f1999b70faf6fdbe92e6bceacea7f.jpg"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill" />
 
                             </ControlTemplate>
                         </Button.Template>
@@ -71,17 +85,7 @@
                         <Button.Template>
                             <ControlTemplate>
 
-                                <Image Source="https://i.pinimg.com/originals/2d/2f/19/2d2f1999b70faf6fdbe92e6bceacea7f.jpg"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill" />
-
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
-
-                    <Button Click="Button_Click" >
-                        <Button.Template>
-                            <ControlTemplate>
-
-                                <Image Source="https://timesofindia.indiatimes.com/thumb/msid-77262658,imgsize-727413,width-400,resizemode-4/77262658.jpg" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill"/>
+                                <Image x:Name="hotNewsImg3" Source="https://timesofindia.indiatimes.com/thumb/msid-77262658,imgsize-727413,width-400,resizemode-4/77262658.jpg" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill"/>
 
 
                             </ControlTemplate>
@@ -98,7 +102,7 @@
         FontWeight="Bold" FontSize="18"  Foreground="#0066cc" >Games</Label>
                 </Border>
 
-                <ListBox ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Row="7"  Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="LightGreen" Height="250" >
+                <ListBox ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Row="7"  Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="LightGreen" Height="250" Grid.ColumnSpan="2" >
 
                     <ListBox.ItemsPanel>
                         <ItemsPanelTemplate>
@@ -109,7 +113,7 @@
                         <Button.Template>
                             <ControlTemplate>
 
-                                <Image Source="https://cdn.mos.cms.futurecdn.net/yUnL8v4TynaEDbtjsUwDhg.jpg"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill"/>
+                                <Image x:Name="gamesImg1" Source="https://cdn.mos.cms.futurecdn.net/yUnL8v4TynaEDbtjsUwDhg.jpg"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill"/>
 
                             </ControlTemplate>
                         </Button.Template>
@@ -119,7 +123,7 @@
                         <Button.Template>
                             <ControlTemplate>
 
-                                <Image Source="https://i.pinimg.com/originals/2d/2f/19/2d2f1999b70faf6fdbe92e6bceacea7f.jpg"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill" />
+                                <Image x:Name="gamesImg2" Source="https://i.pinimg.com/originals/2d/2f/19/2d2f1999b70faf6fdbe92e6bceacea7f.jpg"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill" />
 
                             </ControlTemplate>
                         </Button.Template>
@@ -129,7 +133,7 @@
                         <Button.Template>
                             <ControlTemplate>
 
-                                <Image Source="https://timesofindia.indiatimes.com/thumb/msid-77262658,imgsize-727413,width-400,resizemode-4/77262658.jpg" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill"/>
+                                <Image x:Name="gamesImg3" Source="https://timesofindia.indiatimes.com/thumb/msid-77262658,imgsize-727413,width-400,resizemode-4/77262658.jpg" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill"/>
 
 
                             </ControlTemplate>
@@ -147,7 +151,7 @@
         FontWeight="Bold" FontSize="18"  Foreground="#0066cc" >Movies</Label>
                 </Border>
 
-                <ListBox ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Row="9"  Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="LightGreen" Height="250" >
+                <ListBox ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Row="9"  Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="LightGreen" Height="250" Grid.ColumnSpan="2" >
 
                     <ListBox.ItemsPanel>
                         <ItemsPanelTemplate>
@@ -158,7 +162,7 @@
                         <Button.Template>
                             <ControlTemplate>
 
-                                <Image Source="https://cdn.mos.cms.futurecdn.net/yUnL8v4TynaEDbtjsUwDhg.jpg"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill"/>
+                                <Image x:Name="moviesImg1" Source="https://cdn.mos.cms.futurecdn.net/yUnL8v4TynaEDbtjsUwDhg.jpg"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill"/>
 
                             </ControlTemplate>
                         </Button.Template>
@@ -168,7 +172,7 @@
                         <Button.Template>
                             <ControlTemplate>
 
-                                <Image Source="https://i.pinimg.com/originals/2d/2f/19/2d2f1999b70faf6fdbe92e6bceacea7f.jpg"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill" />
+                                <Image x:Name="moviesImg2" Source="https://i.pinimg.com/originals/2d/2f/19/2d2f1999b70faf6fdbe92e6bceacea7f.jpg"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill" />
 
                             </ControlTemplate>
                         </Button.Template>
@@ -178,13 +182,24 @@
                         <Button.Template>
                             <ControlTemplate>
 
-                                <Image Source="https://timesofindia.indiatimes.com/thumb/msid-77262658,imgsize-727413,width-400,resizemode-4/77262658.jpg" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill"/>
+                                <Image x:Name="moviesImg3" Source="https://timesofindia.indiatimes.com/thumb/msid-77262658,imgsize-727413,width-400,resizemode-4/77262658.jpg" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill"/>
 
 
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
                 </ListBox>
+                <TextBox x:Name="hotNewsTextBox1" HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" VerticalAlignment="Top" Width="242" Margin="42,159,0,0" Grid.Row="3" Grid.Column="1" TextChanged="TextBox_TextChanged" Text="Article goes here" FontSize="15" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" Grid.ColumnSpan="2"/>
+                <TextBox x:Name="hotNewsTextBox2" HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" VerticalAlignment="Top" Width="242" Margin="148,159,0,0" Grid.Row="3" Grid.Column="2" TextChanged="TextBox_TextChanged" Text="Article goes here" FontSize="15" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}"/>
+                <TextBox x:Name="hotNewsTextBox3" HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" VerticalAlignment="Top" Width="242" Margin="480,159,0,0" Grid.Row="3" Grid.Column="2" TextChanged="TextBox_TextChanged" Text="Article goes here" FontSize="15" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}"/>
+
+                <TextBox x:Name="gamesTextBox1" HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" VerticalAlignment="Top" Width="242" Margin="42,148,0,0" Grid.Row="7" Grid.Column="1" TextChanged="TextBox_TextChanged" Text="Article goes here" FontSize="15" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" Grid.ColumnSpan="2"/>
+                <TextBox x:Name="gamesTextBox2" HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" VerticalAlignment="Top" Width="242" Margin="148,148,0,0" Grid.Row="7" Grid.Column="2" TextChanged="TextBox_TextChanged" Text="Article goes here" FontSize="15" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}"/>
+                <TextBox x:Name="gamesTextBox3" HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" VerticalAlignment="Top" Width="242" Margin="480,148,0,0" Grid.Row="7" Grid.Column="2" TextChanged="TextBox_TextChanged" Text="Article goes here" FontSize="15" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}"/>
+                
+                <TextBox x:Name="moviesTextBox1" HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" VerticalAlignment="Top" Width="242" Margin="42,165,0,0" Grid.Row="9" Grid.Column="1" TextChanged="TextBox_TextChanged" Text="Article goes here" FontSize="15" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" Grid.ColumnSpan="2"/>
+                <TextBox x:Name="moviesTextBox2" HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" VerticalAlignment="Top" Width="242" Margin="148,165,0,0" Grid.Row="9" Grid.Column="2" TextChanged="TextBox_TextChanged" Text="Article goes here" FontSize="15" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}"/>
+                <TextBox x:Name="moviesTextBox3" HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" VerticalAlignment="Top" Width="242" Margin="480,165,0,0" Grid.Row="9" Grid.Column="2" TextChanged="TextBox_TextChanged" Text="Article goes here" FontSize="15" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}"/>
 
             </Grid>
 
