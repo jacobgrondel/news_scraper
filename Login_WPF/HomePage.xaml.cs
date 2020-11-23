@@ -161,22 +161,22 @@ namespace Login_WPF
              *   Scraping movies article title
              */
 
-            var moviesArticle = node.SelectSingleNode("//span[contains(@class, 'story-related-title')]").InnerText;
+            //var moviesArticle = node.SelectSingleNode("//a[contains(@class, 'title')]").InnerText;
 
-            moviesArticle = moviesArticle.Trim();
+            //moviesArticle = moviesArticle.Trim();
 
-            moviesTextBox1.Clear();
-            moviesTextBox2.Clear();
-            moviesTextBox3.Clear();
+            //moviesTextBox1.Clear();
+            //moviesTextBox2.Clear();
+            //moviesTextBox3.Clear();
 
-            moviesTextBox1.AppendText(moviesArticle);
-            moviesTextBox2.AppendText(moviesArticle);
-            moviesTextBox3.AppendText(moviesArticle);
+            //moviesTextBox1.AppendText(moviesArticle);
+            //moviesTextBox2.AppendText(moviesArticle);
+            //moviesTextBox3.AppendText(moviesArticle);
 
             /**
           *   Scraping movie article image source
           */
-            var moviesImgSrc = node.SelectSingleNode("//span[contains(@class, 'story-cover-image')]//img").Attributes["src"].Value;
+            //var moviesImgSrc = node.SelectSingleNode("//span[contains(@class, 'story-cover-image')]//img").Attributes["src"].Value;
 
         }
 

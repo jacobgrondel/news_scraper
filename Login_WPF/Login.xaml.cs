@@ -109,8 +109,8 @@ namespace Newsy
                 HomePage newScrapper = new HomePage();
                
                 
-                newScrapper.Show();
-                // welcome.Show();
+                //newScrapper.Show();
+                welcome.Show();
                 Close();
             } else
             {

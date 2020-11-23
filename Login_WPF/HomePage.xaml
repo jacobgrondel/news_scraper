@@ -8,8 +8,7 @@
         Title="HomePage" Height="1284" Width="1268">
     <ScrollViewer HorizontalScrollBarVisibility="Auto" Margin="0,0,0,0">
         <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
-
-            <Grid Margin="0,0,0,0"  Width="1181"  >
+            <Grid Margin="0,0,0,0"  Width="1130" Height="1109"  >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="100"/>
                     <ColumnDefinition Width="237"/>
@@ -50,7 +49,7 @@
                 <!-- Hottest News -->
                 <Border BorderBrush="#FF000000" Background="Black" BorderThickness="0.5" CornerRadius="10"  Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Margin="0,10,0,10">
                     <Label   FontFamily="Trebuchet MS" 
-        FontWeight="Bold" FontSize="18"  Foreground="#0066cc" >Hottest News</Label>
+        FontWeight="Bold" FontSize="18"  Foreground="#0066cc" Content="Hottest News" />
                 </Border>
 
                 <ListBox ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Row="3" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Height="250" Background="Orange" Grid.ColumnSpan="2">
@@ -60,12 +59,14 @@
                         </ItemsPanelTemplate>
                     </ListBox.ItemsPanel>
 
+
                     <Button Click="Button_Click" >
                         <Button.Template>
                             <ControlTemplate>
-                                
+
                                 <Image x:Name="hotNewsImg1" Source="https://i.pinimg.com/originals/2d/2f/19/2d2f1999b70faf6fdbe92e6bceacea7f.jpg"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill" />
-                                
+
+
                             </ControlTemplate>
                         </Button.Template>
 
@@ -99,7 +100,7 @@
 
                 <Border BorderBrush="#FF000000" Background="Black" BorderThickness="0.5" CornerRadius="10"  Grid.Column="1" Grid.Row="6" HorizontalAlignment="Left" Margin="0,10,0,10">
                     <Label   FontFamily="Trebuchet MS" 
-        FontWeight="Bold" FontSize="18"  Foreground="#0066cc" >Games</Label>
+        FontWeight="Bold" FontSize="18"  Foreground="#0066cc" Content="Games" />
                 </Border>
 
                 <ListBox ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Row="7"  Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="LightGreen" Height="250" Grid.ColumnSpan="2" >
@@ -148,7 +149,7 @@
 
                 <Border BorderBrush="#FF000000" Background="Black" BorderThickness="0.5" CornerRadius="10"  Grid.Column="1" Grid.Row="8" HorizontalAlignment="Left" Margin="0,10,0,10">
                     <Label   FontFamily="Trebuchet MS" 
-        FontWeight="Bold" FontSize="18"  Foreground="#0066cc" >Movies</Label>
+        FontWeight="Bold" FontSize="18"  Foreground="#0066cc" Content="Movies" />
                 </Border>
 
                 <ListBox ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Row="9"  Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="LightGreen" Height="250" Grid.ColumnSpan="2" >
@@ -196,7 +197,7 @@
                 <TextBox x:Name="gamesTextBox1" HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" VerticalAlignment="Top" Width="242" Margin="42,148,0,0" Grid.Row="7" Grid.Column="1" TextChanged="TextBox_TextChanged" Text="Article goes here" FontSize="15" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" Grid.ColumnSpan="2"/>
                 <TextBox x:Name="gamesTextBox2" HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" VerticalAlignment="Top" Width="242" Margin="148,148,0,0" Grid.Row="7" Grid.Column="2" TextChanged="TextBox_TextChanged" Text="Article goes here" FontSize="15" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}"/>
                 <TextBox x:Name="gamesTextBox3" HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" VerticalAlignment="Top" Width="242" Margin="480,148,0,0" Grid.Row="7" Grid.Column="2" TextChanged="TextBox_TextChanged" Text="Article goes here" FontSize="15" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}"/>
-                
+
                 <TextBox x:Name="moviesTextBox1" HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" VerticalAlignment="Top" Width="242" Margin="42,165,0,0" Grid.Row="9" Grid.Column="1" TextChanged="TextBox_TextChanged" Text="Article goes here" FontSize="15" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" Grid.ColumnSpan="2"/>
                 <TextBox x:Name="moviesTextBox2" HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" VerticalAlignment="Top" Width="242" Margin="148,165,0,0" Grid.Row="9" Grid.Column="2" TextChanged="TextBox_TextChanged" Text="Article goes here" FontSize="15" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}"/>
                 <TextBox x:Name="moviesTextBox3" HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" VerticalAlignment="Top" Width="242" Margin="480,165,0,0" Grid.Row="9" Grid.Column="2" TextChanged="TextBox_TextChanged" Text="Article goes here" FontSize="15" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}"/>
