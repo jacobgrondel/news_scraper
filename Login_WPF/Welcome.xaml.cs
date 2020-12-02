@@ -72,7 +72,7 @@ namespace Newsy
             else
             {
                 sidePanel.Width -= 1;
-                if (sidePanel.Width <= 45)
+                if (sidePanel.Width <= 65)
                 {
                     timer.Stop();
                     hidden = true;
@@ -148,35 +148,38 @@ namespace Newsy
         private void ScrapeHotNews()
         {
 
-            var url = "https://edition.cnn.com/";
+            var url = "https://www.foxnews.com/";
             var web = new HtmlWeb();
             var doc = web.Load(url);
 
-            var node = doc.DocumentNode.SelectSingleNode("//strong");
+            var node = doc.DocumentNode.SelectSingleNode("//body");
 
 
 
             /**
-             *   Scraping movies article title
+             *   Scraping Hot News title
              */
 
-            //  var hotNewsArticle = node.InnerText;
+            var hotNewsArticle = node.SelectSingleNode("//div[contains(@class, 'content')]//article[contains(@class, 'article')]//div[contains(@class, 'info')]//header[contains(@class, 'info-header')]//h2[contains(@class, 'title')]//a").InnerText;
 
-            //  hotNewsArticle = hotNewsArticle.Trim();
+            hotNewsArticle = hotNewsArticle.Trim();
 
-            //  hotNewsTextBox1.Clear();
-            //  hotNewsTextBox2.Clear();
-            //  hotNewsTextBox3.Clear();
+            hotNewsTextBox1.Clear();
+            hotNewsTextBox2.Clear();
+            hotNewsTextBox3.Clear();
 
-            //  hotNewsTextBox1.AppendText(hotNewsArticle);
-            //  hotNewsTextBox2.AppendText(hotNewsArticle);
-            //  hotNewsTextBox3.AppendText(hotNewsArticle);
+            hotNewsTextBox1.AppendText(hotNewsArticle);
+            hotNewsTextBox2.AppendText(hotNewsArticle);
+            hotNewsTextBox3.AppendText(hotNewsArticle);
 
-            //  /**
-            //*   Scraping movie article image source
-            //*/
-            //  var hotNewsImgSrc = node.SelectSingleNode("//span[contains(@class, 'story-cover-image')]//img").Attributes["src"].Value;
+              /**
+                *   Scraping movie article image source
+                */
+            var hotNewsImgSrc = node.SelectSingleNode("//img").Attributes["src"].Value;
 
+            hotNewsImg1.Source = new BitmapImage(new Uri("https://a57.foxnews.com/hp.foxnews.com/images/2020/11/1024/576/ddb5647e3db00d847efb8d52d9696e27.jpg?tl=1&ve=1"));
+            //hotNewsImg2.Source = new BitmapImage(new Uri(hotNewsImgSrc));
+            //hotNewsImg3.Source = new BitmapImage(new Uri(hotNewsImgSrc));
         }
 
         /**
