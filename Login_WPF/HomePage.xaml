@@ -13,6 +13,8 @@
                     <ColumnDefinition Width="100"/>
                     <ColumnDefinition Width="237"/>
                     <ColumnDefinition Width="764"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -52,10 +54,10 @@
         FontWeight="Bold" FontSize="18"  Foreground="#0066cc" Content="Hottest News" />
                 </Border>
 
-                <ListBox ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Row="3" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Height="250" Background="Orange" Grid.ColumnSpan="2">
+                <ListBox ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Row="3" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Height="250" Background="Orange" Grid.ColumnSpan="2">
                     <ListBox.ItemsPanel>
                         <ItemsPanelTemplate>
-                            <UniformGrid Rows="1" Columns="3"/>
+                            <UniformGrid Rows="1" />
                         </ItemsPanelTemplate>
                     </ListBox.ItemsPanel>
 
@@ -93,6 +95,33 @@
                         </Button.Template>
                     </Button>
 
+              <Button Click="Button_Click" >
+                        <Button.Template>
+                            <ControlTemplate>
+
+                                <Image x:Name="hotNewsImg4" Source="https://static.wikia.nocookie.net/holy-world-war-fan-fiction-series/images/a/a1/Itachi_Uchiha.png/revision/latest?cb=20171115205823"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill" />
+
+
+                            </ControlTemplate>
+                        </Button.Template>
+
+                    </Button>  
+                  
+                  
+                
+              <Button Click="Button_Click" >
+                        <Button.Template>
+                            <ControlTemplate>
+
+                                <Image x:Name="hotNewsImg5" Source="https://i.pinimg.com/originals/2d/2f/19/2d2f1999b70faf6fdbe92e6bceacea7f.jpg"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill" />
+
+
+                            </ControlTemplate>
+                        </Button.Template>
+
+                    </Button>
+              
+              
                 </ListBox>
 
                 <!-- Games Section -->

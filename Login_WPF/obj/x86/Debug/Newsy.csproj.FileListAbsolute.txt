@@ -81,3 +81,7 @@ C:\Users\HaHa\Documents\GitHub\news_scraper\Login_WPF\bin\Debug\HtmlAgilityPack.
 C:\Users\HaHa\Documents\GitHub\news_scraper\Login_WPF\bin\Debug\HtmlAgilityPack.pdb
 C:\Users\HaHa\Documents\GitHub\news_scraper\Login_WPF\bin\Debug\HtmlAgilityPack.xml
 C:\Users\HaHa\Documents\GitHub\news_scraper\Login_WPF\obj\x86\Debug\Newsy.csproj.CopyComplete
+G:\LDSBC\Newsy\news_scraper\Login_WPF\bin\Debug\HtmlAgilityPack.dll
+G:\LDSBC\Newsy\news_scraper\Login_WPF\bin\Debug\HtmlAgilityPack.pdb
+G:\LDSBC\Newsy\news_scraper\Login_WPF\bin\Debug\HtmlAgilityPack.xml
+G:\LDSBC\Newsy\news_scraper\Login_WPF\obj\x86\Debug\Newsy.csproj.CopyComplete

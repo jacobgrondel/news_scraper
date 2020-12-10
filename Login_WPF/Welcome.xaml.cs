@@ -152,7 +152,7 @@ namespace Newsy
             var web = new HtmlWeb();
             var doc = web.Load(url);
 
-            var node = doc.DocumentNode.SelectSingleNode("//body");
+            List<String> templist = new List<String>();
 
 
 
@@ -160,24 +160,29 @@ namespace Newsy
              *   Scraping Hot News title
              */
 
-            var hotNewsArticle = node.SelectSingleNode("//div[contains(@class, 'content')]//article[contains(@class, 'article')]//div[contains(@class, 'info')]//header[contains(@class, 'info-header')]//h2[contains(@class, 'title')]//a").InnerText;
-
-            hotNewsArticle = hotNewsArticle.Trim();
+            String str = "//div[contains(@class, 'content')]//article[contains(@class, 'article')]//div[contains(@class, 'info')]//header[contains(@class, 'info-header')]//h2[contains(@class, 'title')]//a";
+            foreach(HtmlNode node in doc.DocumentNode.SelectNodes(str))
+                {
+            templist.Add(node.ChildNodes[0].InnerHtml.Trim());
+            }
 
             hotNewsTextBox1.Clear();
             hotNewsTextBox2.Clear();
             hotNewsTextBox3.Clear();
+            hotNewsTextBox4.Clear();
+            hotNewsTextBox5.Clear();
 
-            hotNewsTextBox1.AppendText(hotNewsArticle);
-            hotNewsTextBox2.AppendText(hotNewsArticle);
-            hotNewsTextBox3.AppendText(hotNewsArticle);
+
+            hotNewsTextBox1.AppendText(templist[0]);
+            hotNewsTextBox2.AppendText(templist[1]);
+            hotNewsTextBox3.AppendText(templist[2]);
+            hotNewsTextBox4.AppendText(templist[3]);
+            hotNewsTextBox5.AppendText(templist[4]);
 
               /**
                 *   Scraping movie article image source
                 */
-            var hotNewsImgSrc = node.SelectSingleNode("//img").Attributes["src"].Value;
-
-            hotNewsImg1.Source = new BitmapImage(new Uri("https://a57.foxnews.com/hp.foxnews.com/images/2020/11/1024/576/ddb5647e3db00d847efb8d52d9696e27.jpg?tl=1&ve=1"));
+          
             //hotNewsImg2.Source = new BitmapImage(new Uri(hotNewsImgSrc));
             //hotNewsImg3.Source = new BitmapImage(new Uri(hotNewsImgSrc));
         }
