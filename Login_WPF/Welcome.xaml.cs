@@ -42,10 +42,7 @@ namespace Newsy
 
 
         private void ScrollBar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-
-
-
+        {  
         }
 
 
@@ -97,12 +94,12 @@ namespace Newsy
          * ---------------------------------
            *   Scraping main front article
            *   Src: "https://www.bbc.com/";
-           *   
            *   -----------------------------
            */
         private void ScrapeMainNews()
         {
-            mainArticle.Clear();
+
+            NewsClass mainNews = new NewsClass();
 
             var url = "https://www.bbc.com/";
             var web = new HtmlWeb();
@@ -111,30 +108,26 @@ namespace Newsy
             var node = doc.DocumentNode.SelectSingleNode("//body");
 
 
-
             /**
              *   Scraping main article title
              */
 
-            var headArticle = node.SelectSingleNode("//a[contains(@class, 'media__link')]").InnerText;
+            mainNews.Article = node.SelectSingleNode("//a[contains(@class, 'media__link')]").InnerText.Trim();
 
-            headArticle = headArticle.Trim();
+            mainArticle.Clear();
+            mainArticle.AppendText(mainNews.Article);
 
-            mainArticle.AppendText(headArticle);
-
+            mainTextBox.Clear();
+            mainTextBox.AppendText(mainNews.Article);
 
 
             /**
              *   Scraping main article image source
              */
-            var imgSrc = node.SelectSingleNode("//div[contains(@class, 'responsive-image')]//img").Attributes["src"].Value;
+            mainNews.ImgSrc = node.SelectSingleNode("//div[contains(@class, 'responsive-image')]//img").Attributes["src"].Value;
 
-            mainImage.Source = new BitmapImage(new Uri(imgSrc));
-            mainImage.Width = 304;
+            mainImage.Source = new BitmapImage(new Uri(mainNews.ImgSrc));
 
-
-            mainTextBox.Clear();
-            mainTextBox.AppendText(headArticle);
         }
 
 
@@ -148,23 +141,25 @@ namespace Newsy
         private void ScrapeHotNews()
         {
 
+            List<NewsClass> hotNewsList = new List<NewsClass>();
+            int numOfNews = 0;
+
             var url = "https://www.foxnews.com/";
             var web = new HtmlWeb();
             var doc = web.Load(url);
 
-            List<String> templist = new List<String>();
-
-
-
+          
             /**
              *   Scraping Hot News title
              */
 
             String str = "//div[contains(@class, 'content')]//article[contains(@class, 'article')]//div[contains(@class, 'info')]//header[contains(@class, 'info-header')]//h2[contains(@class, 'title')]//a";
             foreach(HtmlNode node in doc.DocumentNode.SelectNodes(str))
-                {
-            templist.Add(node.ChildNodes[0].InnerHtml.Trim());
+            {
+                hotNewsList.Add(new NewsClass());
+                hotNewsList[numOfNews++].Article = node.ChildNodes[0].InnerHtml.Trim();
             }
+
 
             hotNewsTextBox1.Clear();
             hotNewsTextBox2.Clear();
@@ -172,12 +167,12 @@ namespace Newsy
             hotNewsTextBox4.Clear();
             hotNewsTextBox5.Clear();
 
-
-            hotNewsTextBox1.AppendText(templist[0]);
-            hotNewsTextBox2.AppendText(templist[1]);
-            hotNewsTextBox3.AppendText(templist[2]);
-            hotNewsTextBox4.AppendText(templist[3]);
-            hotNewsTextBox5.AppendText(templist[4]);
+            
+            hotNewsTextBox1.AppendText(hotNewsList[0].Article);
+            hotNewsTextBox2.AppendText(hotNewsList[1].Article);
+            hotNewsTextBox3.AppendText(hotNewsList[2].Article);
+            hotNewsTextBox4.AppendText(hotNewsList[3].Article);
+            hotNewsTextBox5.AppendText(hotNewsList[4].Article);
 
               /**
                 *   Scraping movie article image source

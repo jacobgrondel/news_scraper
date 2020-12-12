@@ -79,6 +79,7 @@
     <Compile Include="HottestNews.xaml.cs">
       <DependentUpon>HottestNews.xaml</DependentUpon>
     </Compile>
+    <Compile Include="NewsClass.cs" />
     <Compile Include="NewScrapperHome.xaml.cs">
       <DependentUpon>NewScrapperHome.xaml</DependentUpon>
     </Compile>

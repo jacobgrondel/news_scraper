@@ -151,7 +151,7 @@
                         <Image x:Name="hotNewsImg1" Source="https://i.pinimg.com/originals/2d/2f/19/2d2f1999b70faf6fdbe92e6bceacea7f.jpg"  Stretch="UniformToFill"  />
 
                         <Image x:Name="hotNewsImg2" Source="https://i.pinimg.com/originals/2d/2f/19/2d2f1999b70faf6fdbe92e6bceacea7f.jpg"   HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill"/>
-=
+
                         <Image x:Name="hotNewsImg3" Source="https://i.pinimg.com/originals/2d/2f/19/2d2f1999b70faf6fdbe92e6bceacea7f.jpg" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill"/>
 
                         <Image x:Name="hotNewsImg4" Source="https://i.pinimg.com/originals/2d/2f/19/2d2f1999b70faf6fdbe92e6bceacea7f.jpg"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill" />
@@ -162,24 +162,24 @@
 
 
                   <Button Click="Button_Click"  Height="43"  VerticalAlignment="Top"  HorizontalAlignment="Left" Width="150" Margin="40,0,0,0" Grid.Row="4" Grid.Column="1" Background="#F99AF2">
-                    Read Here
+                    Read More
                   </Button>
 
                   <Button Click="Button_Click"  Height="43"  VerticalAlignment="Top"  HorizontalAlignment="Left" Width="150" Margin="-6,0,0,0" Grid.Row="4" Grid.Column="2" Background="#F99AF2">
-                    Read Here
+                    Read More
                   </Button>
 
 
                   <Button Click="Button_Click"  Height="43"  VerticalAlignment="Top"  HorizontalAlignment="Left" Width="150" Margin="230,0,0,0" Grid.Row="4" Grid.Column="2" Background="#F99AF2">
-                    Read Here
+                    Read More
                   </Button>
 
                   <Button Click="Button_Click"  Height="43"  VerticalAlignment="Top"  HorizontalAlignment="Left" Width="150" Margin="465,0,0,0" Grid.Row="4" Grid.Column="2" Background="#F99AF2">
-                    Read Here
+                    Read More
                   </Button>
 
                   <Button Click="Button_Click"  Height="43"  VerticalAlignment="Top"  HorizontalAlignment="Left" Width="150" Margin="705,0,0,0" Grid.Row="4" Grid.Column="2" Background="#F99AF2">
-                    Read Here
+                    Read More
                   </Button>
 
                     <!-- Games Section -->
@@ -211,24 +211,24 @@
 
                     </ListBox>
                   <Button Click="Button_Click"  Height="43"  VerticalAlignment="Top"  HorizontalAlignment="Left" Width="150" Margin="40,0,0,0" Grid.Row="8" Grid.Column="1" Background="#F99AF2">
-                    Read Here
+                    Read More
                   </Button>
 
                   <Button Click="Button_Click"  Height="43"  VerticalAlignment="Top"  HorizontalAlignment="Left" Width="150" Margin="-6,0,0,0" Grid.Row="8" Grid.Column="2" Background="#F99AF2">
-                    Read Here
+                    Read More
                   </Button>
 
 
                   <Button Click="Button_Click"  Height="43"  VerticalAlignment="Top"  HorizontalAlignment="Left" Width="150" Margin="230,0,0,0" Grid.Row="8" Grid.Column="2" Background="#F99AF2">
-                    Read Here
+                    Read More
                   </Button>
 
                   <Button Click="Button_Click"  Height="43"  VerticalAlignment="Top"  HorizontalAlignment="Left" Width="150" Margin="465,0,0,0" Grid.Row="8" Grid.Column="2" Background="#F99AF2">
-                    Read Here
+                    Read More
                   </Button>
 
                   <Button Click="Button_Click"  Height="43"  VerticalAlignment="Top"  HorizontalAlignment="Left" Width="150" Margin="705,0,0,0" Grid.Row="8" Grid.Column="2" Background="#F99AF2">
-                    Read Here
+                    Read More
                   </Button>
 
 
@@ -263,24 +263,24 @@
                     </ListBox>
                   
                   <Button Click="Button_Click"  Height="43"  VerticalAlignment="Top"  HorizontalAlignment="Left" Width="150" Margin="40,0,0,0" Grid.Row="11" Grid.Column="1" Background="#F99AF2">
-                  Read Here
+                  Read More
                   </Button>
                   
                   <Button Click="Button_Click"  Height="43"  VerticalAlignment="Top"  HorizontalAlignment="Left" Width="150" Margin="-6,0,0,0" Grid.Row="11" Grid.Column="2" Background="#F99AF2">
-                  Read Here
+                  Read More
                   </Button>
 
 
                   <Button Click="Button_Click"  Height="43"  VerticalAlignment="Top"  HorizontalAlignment="Left" Width="150" Margin="230,0,0,0" Grid.Row="11" Grid.Column="2" Background="#F99AF2">
-                    Read Here
+                    Read More
                   </Button>
                   
                   <Button Click="Button_Click"  Height="43"  VerticalAlignment="Top"  HorizontalAlignment="Left" Width="150" Margin="465,0,0,0" Grid.Row="11" Grid.Column="2" Background="#F99AF2">
-                    Read Here
+                    Read More
                   </Button>
 
                   <Button Click="Button_Click"  Height="43"  VerticalAlignment="Top"  HorizontalAlignment="Left" Width="150" Margin="705,0,0,0" Grid.Row="11" Grid.Column="2" Background="#F99AF2">
-                    Read Here
+                    Read More
                   </Button>
                   
                   
