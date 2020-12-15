@@ -22,6 +22,12 @@ namespace Newsy
     /// </summary>
     public partial class Welcome : Window
     {
+
+        List<NewsClass> hotNewsList;
+
+
+
+        Grid temp;
         DispatcherTimer timer;
 
         double panelWidth;
@@ -52,7 +58,59 @@ namespace Newsy
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-           
+            
+            Button clickedButton = sender as Button;
+
+            if (clickedButton == null) // just to be on the safe side
+                return;
+
+            if (clickedButton.Name == "HotNewsButton1")
+            {
+                
+                temp = myGrid;
+                myGrid.Children.Clear();
+                Console.WriteLine("Button 1 hot news");
+
+
+
+                TextBox newTextBox = new TextBox();
+                newTextBox.Text = hotNewsList[0].Article;
+                //newTextBox.TextAlignment = TextAlignment.Center; 
+                //newTextBox.VerticalAlignment = VerticalAlignment.Center;
+            
+                newTextBox.FontSize = 42;
+                //newTextBox.Margin = "39,0,62,0";
+                temp.Children.Add(newTextBox);
+                myGrid = temp;
+                
+                
+   
+                                          
+                Console.WriteLine(hotNewsList[0].Article);
+
+            }
+            else if (clickedButton.Name == "HotNewsButton2")
+            {
+                Console.WriteLine("Button 2 hot news!!");
+            }
+            else if (clickedButton.Name == "HotNewsButton3")
+            {
+                Console.WriteLine("Button 3 hot news!!");
+            }
+            else if (clickedButton.Name == "HotNewsButton4")
+            {
+                Console.WriteLine("Button 4 hot news!!");
+            }
+            else if (clickedButton.Name == "goBackButton")
+            {
+                
+                myGrid = temp;
+
+
+  
+
+                Console.WriteLine("goBack");
+            }
         }
 
         private void Timer_Tick(object sender, EventArgs e)
@@ -141,7 +199,7 @@ namespace Newsy
         private void ScrapeHotNews()
         {
 
-            List<NewsClass> hotNewsList = new List<NewsClass>();
+            hotNewsList = new List<NewsClass>();
             int numOfNews = 0;
 
             var url = "https://www.foxnews.com/";
@@ -174,12 +232,27 @@ namespace Newsy
             hotNewsTextBox4.AppendText(hotNewsList[3].Article);
             hotNewsTextBox5.AppendText(hotNewsList[4].Article);
 
-              /**
-                *   Scraping movie article image source
-                */
-          
-            //hotNewsImg2.Source = new BitmapImage(new Uri(hotNewsImgSrc));
-            //hotNewsImg3.Source = new BitmapImage(new Uri(hotNewsImgSrc));
+            /**
+              *   Scraping movie article image source
+              */
+
+            String str2 = "//div[contains(@class, 'content')]//article[contains(@class, 'article')]//div[contains(@class, 'm')]//a//img";
+
+            numOfNews = 0;
+            foreach (HtmlNode node in doc.DocumentNode.SelectNodes(str))
+            {
+                //hotNewsList.Add(new NewsClass());
+                //hotNewsList[numOfNews++].Article = node.ChildNodes[0].InnerHtml;
+                Console.WriteLine(node.ChildNodes[0]);
+                //GetAttributeValue("src", "")
+                //hotNewsList[numOfNews++].ImgSrc = node.GetAttributeValue("src", "");
+            }
+
+            //hotNewsImg1.Source = new BitmapImage(new Uri(hotNewsList[0].ImgSrc));
+            //hotNewsImg2.Source = new BitmapImage(new Uri(hotNewsList[1].ImgSrc));
+            //hotNewsImg3.Source = new BitmapImage(new Uri(hotNewsList[2].ImgSrc));
+            //hotNewsImg4.Source = new BitmapImage(new Uri(hotNewsList[3].ImgSrc));
+            //hotNewsImg5.Source = new BitmapImage(new Uri(hotNewsList[4].ImgSrc));
         }
 
         /**
