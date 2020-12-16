@@ -15,6 +15,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 
+
+
 namespace Newsy
 {
     /// <summary>
@@ -24,7 +26,7 @@ namespace Newsy
     {
 
         List<NewsClass> hotNewsList;
-
+        List<NewsClass> gameNewsList;
 
 
         Grid temp;
@@ -37,6 +39,7 @@ namespace Newsy
             InitializeComponent();
 
             hotNewsList = new List<NewsClass>();
+            gameNewsList = new List<NewsClass>();
 
             timer = new DispatcherTimer();
             timer.Interval = new TimeSpan(0, 0, 0, 0, 1);
@@ -267,6 +270,96 @@ namespace Newsy
             hotNewsImg5.Source = new BitmapImage(new Uri(hotNewsList[4].ImgSrc));
         }
 
+
+
+        /**
+     * --------------------------------------
+     *   Scraping Games News
+     *   src: https://www.ign.com/
+     *   ------------------------------------
+     */
+
+        private void ScrapeGameNews()
+        {
+
+            int numOfNews = 0;
+
+            var url = "https://www.ign.com/";
+            var web = new HtmlWeb();
+            var doc = web.Load(url);
+         
+
+
+            /**
+             *   Scraping Game News title
+             */
+
+
+            foreach (HtmlNode node in doc.DocumentNode.SelectNodes("//h3"))
+            {
+                gameNewsList.Add(new NewsClass()); 
+                gameNewsList[numOfNews++].Article = node.ChildNodes[0].InnerText.Trim();
+            }
+
+
+            gamesTextBox1.Clear();
+            gamesTextBox2.Clear();
+            gamesTextBox3.Clear();
+            gamesTextBox4.Clear();
+            gamesTextBox5.Clear();
+
+
+            gamesTextBox1.AppendText(gameNewsList[0].Article);
+            gamesTextBox2.AppendText(gameNewsList[1].Article);
+            gamesTextBox3.AppendText(gameNewsList[2].Article);
+            gamesTextBox4.AppendText(gameNewsList[3].Article);
+            gamesTextBox5.AppendText(gameNewsList[4].Article);
+
+            /**
+              *   Scraping game article image source
+              */
+
+
+            numOfNews = -2;
+
+            foreach (HtmlNode node in doc.DocumentNode.SelectNodes("//img"))
+            {
+
+                String tempString = node.Attributes["src"].Value;
+                if (numOfNews < 0)
+                {
+                    numOfNews++;
+                }
+                else
+                {
+                    Console.WriteLine(numOfNews);
+                    Console.WriteLine(tempString);
+
+                    gameNewsList[numOfNews].ImgSrc = tempString;
+                    numOfNews++;
+                    if (numOfNews == 5)
+                        break;
+                } 
+               
+            }
+
+
+            gamesImg1.Source = new BitmapImage(new Uri(gameNewsList[0].ImgSrc));
+            gamesImg2.Source = new BitmapImage(new Uri(gameNewsList[1].ImgSrc));
+            gamesImg3.Source = new BitmapImage(new Uri(gameNewsList[2].ImgSrc));
+            gamesImg4.Source = new BitmapImage(new Uri(gameNewsList[3].ImgSrc));
+            gamesImg5.Source = new BitmapImage(new Uri(gameNewsList[4].ImgSrc));
+        }
+
+
+
+
+
+
+
+
+
+
         /**
         * --------------------------------------
        *   Scraping Movies
@@ -327,7 +420,9 @@ namespace Newsy
         private void ScrapeBodyNews()
         {
             ScrapeHotNews();
+            ScrapeGameNews();
             ScrapeMovies();
+            
         }
     }
 }
