@@ -35,6 +35,9 @@ namespace Newsy
         public Welcome()
         {
             InitializeComponent();
+
+            hotNewsList = new List<NewsClass>();
+
             timer = new DispatcherTimer();
             timer.Interval = new TimeSpan(0, 0, 0, 0, 1);
             timer.Tick += Timer_Tick;
@@ -183,7 +186,6 @@ namespace Newsy
              *   Scraping main article image source
              */
             mainNews.ImgSrc = node.SelectSingleNode("//div[contains(@class, 'responsive-image')]//img").Attributes["src"].Value;
-
             mainImage.Source = new BitmapImage(new Uri(mainNews.ImgSrc));
 
         }
@@ -199,20 +201,19 @@ namespace Newsy
         private void ScrapeHotNews()
         {
 
-            hotNewsList = new List<NewsClass>();
             int numOfNews = 0;
 
             var url = "https://www.foxnews.com/";
             var web = new HtmlWeb();
             var doc = web.Load(url);
 
-          
+
             /**
              *   Scraping Hot News title
              */
 
             String str = "//div[contains(@class, 'content')]//article[contains(@class, 'article')]//div[contains(@class, 'info')]//header[contains(@class, 'info-header')]//h2[contains(@class, 'title')]//a";
-            foreach(HtmlNode node in doc.DocumentNode.SelectNodes(str))
+            foreach (HtmlNode node in doc.DocumentNode.SelectNodes(str))
             {
                 hotNewsList.Add(new NewsClass());
                 hotNewsList[numOfNews++].Article = node.ChildNodes[0].InnerHtml.Trim();
@@ -225,7 +226,7 @@ namespace Newsy
             hotNewsTextBox4.Clear();
             hotNewsTextBox5.Clear();
 
-            
+
             hotNewsTextBox1.AppendText(hotNewsList[0].Article);
             hotNewsTextBox2.AppendText(hotNewsList[1].Article);
             hotNewsTextBox3.AppendText(hotNewsList[2].Article);
@@ -236,23 +237,34 @@ namespace Newsy
               *   Scraping movie article image source
               */
 
-            String str2 = "//div[contains(@class, 'content')]//article[contains(@class, 'article')]//div[contains(@class, 'm')]//a//img";
 
-            numOfNews = 0;
-            foreach (HtmlNode node in doc.DocumentNode.SelectNodes(str))
+            numOfNews = -1;
+            
+            foreach (HtmlNode node in doc.DocumentNode.SelectNodes("//img"))
             {
-                //hotNewsList.Add(new NewsClass());
-                //hotNewsList[numOfNews++].Article = node.ChildNodes[0].InnerHtml;
-                Console.WriteLine(node.ChildNodes[0]);
-                //GetAttributeValue("src", "")
-                //hotNewsList[numOfNews++].ImgSrc = node.GetAttributeValue("src", "");
+                String tempString = "https:" + node.Attributes["src"].Value;
+                if (numOfNews == -1)
+                {
+                    numOfNews++;
+                }
+                else
+                {
+                    
+                    hotNewsList[numOfNews].ImgSrc = tempString;
+                    numOfNews++;
+
+                }
             }
 
-            //hotNewsImg1.Source = new BitmapImage(new Uri(hotNewsList[0].ImgSrc));
-            //hotNewsImg2.Source = new BitmapImage(new Uri(hotNewsList[1].ImgSrc));
-            //hotNewsImg3.Source = new BitmapImage(new Uri(hotNewsList[2].ImgSrc));
-            //hotNewsImg4.Source = new BitmapImage(new Uri(hotNewsList[3].ImgSrc));
-            //hotNewsImg5.Source = new BitmapImage(new Uri(hotNewsList[4].ImgSrc));
+            hotNewsImg2.Source = new BitmapImage(new Uri("https://a57.foxnews.com/hp.foxnews.com/images/2020/12/480/270/37b96ab8bc2ed458aced3dc11805becd.jpg"));
+
+      
+
+            hotNewsImg1.Source = new BitmapImage(new Uri(hotNewsList[0].ImgSrc));
+            hotNewsImg2.Source = new BitmapImage(new Uri(hotNewsList[1].ImgSrc));
+            hotNewsImg3.Source = new BitmapImage(new Uri(hotNewsList[2].ImgSrc));
+            hotNewsImg4.Source = new BitmapImage(new Uri(hotNewsList[3].ImgSrc));
+            hotNewsImg5.Source = new BitmapImage(new Uri(hotNewsList[4].ImgSrc));
         }
 
         /**
