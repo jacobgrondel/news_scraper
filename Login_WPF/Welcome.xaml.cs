@@ -27,7 +27,7 @@ namespace Newsy
 
         List<NewsClass> hotNewsList;
         List<NewsClass> gameNewsList;
-
+        List<NewsClass> movieNewsList;
 
         Grid temp;
         DispatcherTimer timer;
@@ -40,6 +40,7 @@ namespace Newsy
 
             hotNewsList = new List<NewsClass>();
             gameNewsList = new List<NewsClass>();
+            movieNewsList = new List<NewsClass>();
 
             timer = new DispatcherTimer();
             timer.Interval = new TimeSpan(0, 0, 0, 0, 1);
@@ -332,8 +333,7 @@ namespace Newsy
                 }
                 else
                 {
-                    Console.WriteLine(numOfNews);
-                    Console.WriteLine(tempString);
+               
 
                     gameNewsList[numOfNews].ImgSrc = tempString;
                     numOfNews++;
@@ -363,50 +363,87 @@ namespace Newsy
         /**
         * --------------------------------------
        *   Scraping Movies
+       *   src : https://www.cinemablend.com/news.php
        *   ------------------------------------
        */
 
         private void ScrapeMovies()
         {
 
-            var url = "https://www.empireonline.com/movies/news/";
+            int numOfNews = 0;
+
+            var url = "https://www.cinemablend.com/news.php";
             var web = new HtmlWeb();
             var doc = web.Load(url);
-
-            var node = doc.DocumentNode.SelectSingleNode("//body");
 
 
 
             /**
-             *   Scraping movies article title
+             *   Scraping Game News title
              */
 
-            var moviesArticle = node.SelectSingleNode("//a[contains(@class, 'title')]").InnerText;
 
-            moviesArticle = moviesArticle.Trim();
+            foreach (HtmlNode node in doc.DocumentNode.SelectNodes("//span[contains(@class, 'story-related-title')]"))
+            {
+                movieNewsList.Add(new NewsClass());
+                movieNewsList[numOfNews++].Article = node.ChildNodes[0].InnerText.Trim();
+            }
+
 
             moviesTextBox1.Clear();
             moviesTextBox2.Clear();
             moviesTextBox3.Clear();
+            moviesTextBox4.Clear();
+            moviesTextBox5.Clear();
 
-            moviesTextBox1.AppendText(moviesArticle);
-            moviesTextBox2.AppendText(moviesArticle);
-            moviesTextBox3.AppendText(moviesArticle);
+
+            moviesTextBox1.AppendText(movieNewsList[0].Article);
+            moviesTextBox2.AppendText(movieNewsList[1].Article);
+            moviesTextBox3.AppendText(movieNewsList[2].Article);
+            moviesTextBox4.AppendText(movieNewsList[3].Article);
+            moviesTextBox5.AppendText(movieNewsList[4].Article);
 
             /**
-              *   Scraping movie article image source
+              *   Scraping game article image source
               */
 
 
+            numOfNews = 0;
 
-            //var moviesImgSrc = node.SelectSingleNode("img[@data-test='image']").Attributes["src"].Value;
+            int newsIndex = -1;
+            foreach (HtmlNode node in doc.DocumentNode.SelectNodes("//img"))
+            {
 
-            //moviesTextBox1.Clear();
-            //moviesTextBox1.AppendText(moviesImgSrc);
+                String tempString = node.Attributes["src"].Value;
+                if (newsIndex >= 0) 
+                { 
+                    if (newsIndex % 2 == 0)
+                    {
+                        movieNewsList[numOfNews++].ImgSrc = tempString;
+                      
+                        if (numOfNews == 5)
+                            break;
+                    }
 
-            //moviesImg1.Source = new BitmapImage(new Uri(moviesImgSrc));
-            //moviesImg2.Source = new BitmapImage(new Uri(moviesImgSrc));
-            //moviesImg3.Source = new BitmapImage(new Uri(moviesImgSrc));
+                }
+                newsIndex++;
+            }
+            Console.WriteLine("0");
+            Console.WriteLine(movieNewsList[0].ImgSrc);
+            Console.WriteLine("1");
+            Console.WriteLine(movieNewsList[1].ImgSrc);
+            Console.WriteLine("2");
+            Console.WriteLine(movieNewsList[2].ImgSrc);
+            Console.WriteLine("3");
+            Console.WriteLine(movieNewsList[3].ImgSrc);
+            Console.WriteLine("4");
+            Console.WriteLine(movieNewsList[4].ImgSrc);
+
+            moviesImg1.Source = new BitmapImage(new Uri(movieNewsList[0].ImgSrc));
+            moviesImg2.Source = new BitmapImage(new Uri(movieNewsList[1].ImgSrc));
+            moviesImg3.Source = new BitmapImage(new Uri(movieNewsList[2].ImgSrc));
+            moviesImg4.Source = new BitmapImage(new Uri(movieNewsList[3].ImgSrc));
+            moviesImg5.Source = new BitmapImage(new Uri(movieNewsList[4].ImgSrc));
         }
 
 
